@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [state,setState]= useState('test@gmail.com');
+  const [state]= useState('test@gmail.com');
   const [inp,setinp]=useState('');
-  const [pass,setpass]=useState('12345678');
+  const [pass]=useState('12345678');
   const [inp2,setinp2]=useState('');
-  const [effect,seteffect]=useState('False');
+  const [effect,seteffect]=useState();
   const einput=(event)=>{
     setinp(event.target.value);
   }
@@ -18,7 +18,7 @@ function App() {
         inp===state ? pass===inp2 ? alert("Login Successful") : alert("Incorrect Password"):alert("Incorrect Email");
     }
     seteffect('False');
-  },);
+  },[]);
   return (
     
     <div className='App'>
