@@ -13,12 +13,17 @@ function App() {
   const pinput=(event)=>{
      setinp2(event.target.value);
   }
+  //eslint-disable-next-line
   useEffect(()=>{
     if(effect==='True'){
         inp===state ? pass===inp2 ? alert("Login Successful") : alert("Incorrect Password"):alert("Incorrect Email");
     }
+    //eslint-disable-next-line;
     seteffect('False');
-  },[]);
+    
+   
+  }//eslint-disable-next-line
+);
   return (
     
     <div className='App'>
